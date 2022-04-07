@@ -1,0 +1,37 @@
+<div class="container">
+        <table class="table">
+            <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" colspan="2">Class</th>
+                    </tr>
+            </thead>
+            <tbody>
+                    {{#each courses}}
+                        <tr>
+                        <th scope="row">{{sum @index 1}}</th>
+                        <td>{{this.name}}</td>
+                        <td>{{this.slug}}</td>
+                        <td>
+                            <a href="/course/show/{{this._id}}" type="button" class="btn btn-light">Edit</a>
+                            <form method="delete" class="form{{this._id}}" action="show/delete/{{this._id}}?_method='delete'">
+                            <button onclick="alert('Đã xóa')">Delete</button>
+                            {{!-- <a href="#"  id="d" data="{{this._id}}" onclick=deletee("{{this._id}}") type="button" class="btn btn-light">Delete</button> --}}
+                            </form> 
+                        </td>
+
+                        
+
+                        </tr>
+                    {{/each}}
+              
+            </tbody>
+        </table>
+</div>
+
+<script>
+
+
+
+</script>
